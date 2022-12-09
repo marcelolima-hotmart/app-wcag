@@ -1,3 +1,7 @@
-# Color Palette
+MSI 2
 
-> Helping create accessible color palettes by analyzing the color contrast of your palette and offering accessible alternatives
+UFMG
+
+Marcelo Medeiros de Lima
+
+Matrícula 2018047030
