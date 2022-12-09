@@ -1,0 +1,64 @@
+{
+  "name": "color-palette",
+  "version": "0.1.0",
+  "dependencies": {
+    "a11y-color": "^0.0.8",
+    "axe-core": "^3.1.2",
+    "cauldron-react": "^0.1.1",
+    "classnames": "^2.2.6",
+    "css-color-checker": "^1.4.0",
+    "css-color-converter": "^1.1.0",
+    "prop-types": "^15.8.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-offscreen": "^1.0.3",
+    "react-scripts": "^2.0.1",
+    "unstated": "^2.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "release": "standard-version",
+    "postrelease": "npm run deploy",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "prettier": {
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{json,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "gh-pages": "^2.0.1",
+    "husky": "^1.1.1",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3",
+    "standard-version": "^8.0.1"
+  }
+}

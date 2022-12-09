@@ -1,0 +1,120 @@
+.palette {
+  background-image: linear-gradient(
+    152deg,
+    #f9f9f9 25%,
+    #ffffff 25%,
+    #ffffff 50%,
+    #f9f9f9 50%,
+    #f9f9f9 75%,
+    #ffffff 75%,
+    #ffffff 100%
+  );
+  background-size: 102.24px 54.36px;
+}
+
+.no-colors {
+  font-size: 24px;
+}
+
+.no-colors,
+.palette ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  width: 1000px;
+  height: 514px;
+}
+.no-colors.narrow,
+.palette ul[role='tablist'] {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.no-colors.narrow {
+  padding: 3em;
+}
+
+.palette h3 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.palette li {
+  background: #f2f2f2;
+  animation: 600ms ease-in fadein;
+}
+
+.palette li.palette__fadeout {
+  animation: 400ms ease-in fadeout;
+  opacity: 0;
+}
+
+.palette .fields {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.palette > ul > li:not(:first-of-type) .fields {
+  border-left: none;
+}
+
+.remove-color,
+.swap-back {
+  background: transparent;
+  color: #666;
+}
+
+.swap-back,
+.remove-color.no-replacement {
+  margin-left: auto;
+}
+
+.rgba-inputs {
+  margin-top: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.rgba-inputs input {
+  width: 30px;
+  min-width: 30px;
+  max-width: 30px;
+  font-size: 11px;
+  margin: 7px;
+}
+
+.rgba-inputs label {
+  width: auto;
+  text-align: left;
+  margin: 0 0 0 12px;
+}
+
+.hex-input input {
+  width: 175px;
+  min-width: 175px;
+  max-width: 175px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
